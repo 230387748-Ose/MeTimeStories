@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>MeTime Stories</title>
+    <meta name="" content="">
+    <meta name="description" content="Bringing your child's limitless imagination to life with personalised stories, made to order for your loved ones.">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png?h=11c3bde2f687b7d173ee737264ea0e27">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png?h=8f73f8916c943d6acee7ca2f6b4aed0f">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png?h=919c220ee0cafb86119f8299a89bae82">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png?h=919c220ee0cafb86119f8299a89bae82">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png?h=4400dc3e30bd51235a8df168b80a7b47">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=025df1ec88740cad5ff14bb3380da6dd">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Palmyrene&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Flex&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.min.css?h=3ee63c3ae91ef86534bb6a30fb81cb9c">
+</head>
+
+<style>
+    body {
+    background-color: rgba(251, 241, 226, 1);
+}
+
+/* Dashboard */
+.dashboard {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1, h2 {
+    color: #333;
+}
+
+/* Select, Textarea, Button common styling */
+select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+button {
+    padding: 8px;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30%;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Progress bar styling */
+progress {
+    width: 100%;
+    height: 20px;
+}
+
+/* Logo */
+.logo {
+    font-family: 'Fredoka One';
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffa726;
+}
+
+/* Title styling */
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Switch Child Container Styling */
+.switch-child-container {
+    margin-bottom: 20px;
+}
+
+.switch-child-container select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Container box */
+.container-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section title */
+.container-box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Stats and Stories text styling */
+.container-box .stats p,
+.container-box .stories p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Button for stories and settings */
+.container-box .stories button,
+.container-box .settings button {
+    padding: 12px 25px;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.container-box .stories button:hover,
+.container-box .settings button:hover {
+    background-color: #16a085;
+}
+
+/* Flexbox button row */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    gap: 10px; /* Adds space between buttons */
+    justify-content: center; /* Centers the buttons */
+}
+
+.button-row button {
+    width: 23%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 7px;
+
+
+    flex: 1; /* Makes buttons expand evenly */
+    min-width: 150px; /* Ensures buttons don't get too small */
+    padding: 12px 20px;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button-row button:hover {
+    background-color: #1abc9c;
+}
+
+/* Story Section Styling */
+.story-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card Styling for Story Progression */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading within the card */
+.card h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Tiles Layout for Available Stories */
+.story-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 10px 0;
+}
+
+/* Story Tile */
+.story-tile {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.story-tile h5 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Image Styling */
+.story-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Dropdown Styling */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styling for "Add New Story" */
+button {
+    padding: 12px 25px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #16a085;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    .story-section {
+        flex-direction: column;
+    }
+
+    .story-tiles {
+        grid-template-columns: 1fr;
+    }
+}
+
+.switch-child-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+.switch-child-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.switch-child-container label {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow effect on text */
+}
+
+.switch-child-container select {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 200px; /* Adjust width */
+    cursor: pointer;
+}
+
+.switch-child-container select:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.switch-child-container select:focus {
+    border: 2px solid #ff7e5f; /* Highlight border on focus */
+    box-shadow: 0 4px 20px rgba(255, 126, 95, 0.5);
+}
+
+/* top */
+/* Section Styles */
+.why-metime-stories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 70px;  /* Reduced padding */
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 15px 0;  /* Reduced margin */
+    /* height: 300px;   */
+}
+
+.why-metime-stories .image-container {
+    position: relative;
+    flex: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-metime-stories .image-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-metime-stories .image-container:hover img {
+    transform: scale(1.05);  /* Smaller zoom effect */
+}
+
+.why-metime-stories .content-container {
+    flex: 1;
+    padding-left: 20px;  /* Reduced padding */
+}
+
+.why-metime-stories .content-container h3 {
+    font-size: 24px;  /* Smaller font size */
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;  /* Reduced margin */
+}
+
+.why-metime-stories .content-container p {
+    font-size: 16px;  /* Smaller font size */
+    color: #666;
+    line-height: 1.4;  /* Reduced line-height */
+    margin-bottom: 15px;  /* Reduced margin */
+}
+
+.why-metime-stories .content-container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.why-metime-stories .content-container ul li {
+    font-size: 14px;  /* Smaller font size */
+    color: #555;
+    margin-bottom: 8px;  /* Reduced margin */
+    position: relative;
+    padding-left: 20px;  /* Adjusted padding */
+}
+
+.why-metime-stories .content-container ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #1abc9c;
+    font-size: 16px;  /* Smaller checkmark */
+}
+
+.why-metime-stories .content-container ul li:hover {
+    color: #1abc9c;
+}
+
+.why-metime-stories:hover .content-container h3 {
+    transform: translateX(15px);  /* Smaller movement */
+}
+
+.why-metime-stories:hover .content-container p,
+.why-metime-stories:hover .content-container ul li {
+    transform: translateX(8px);  /* Smaller movement */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .why-metime-stories {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .why-metime-stories .content-container {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .why-metime-stories .image-container {
+        margin-bottom: 20px;
+    }
+}
+
+.table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            table-layout: fixed;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            word-wrap: break-word;
+        }
+
+        th {
+            background: #FF914D;
+            color: white;
+            font-size: 16px;
+        }
+
+        .skills-header {
+            background: #FFB067;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: rgba(255, 233, 200, 0.7);
+        }
+
+        .delete-btn {
+            background: #FF4D4D;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+            max-width: 100px;
+            margin: auto;
+        }
+
+        .delete-btn:hover {
+            background: #D43F3F;
+        }
+
+         /* Dynamic column sizing */
+         th:nth-child(1), td:nth-child(1) { min-width: 180px; } /* Reader's Name */
+        th:nth-child(2), td:nth-child(2) { min-width: 100px; } /* Books Read */
+        th:nth-child(3), td:nth-child(3),
+        th:nth-child(4), td:nth-child(4),
+        th:nth-child(5), td:nth-child(5) { min-width: 140px; } /* Skills */
+        th:nth-child(6), td:nth-child(6) { min-width: 120px; } /* Delete Button */
+
+        @media (max-width: 768px) {
+            th, td {
+                padding: 10px;
+                font-size: 14px;
+            }
+            .delete-btn {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+</style>
+
+<body>
+    <section class="bg-light" id="home-1" style="background: url(&quot;assets/img/swing.svg?h=f2ee1091a49fa723edfed7163c48577e&quot;) no-repeat, rgb(0,71,255);background-size: 39%, auto;height: 525px;">
+
+        <nav class="navbar navbar-expand-lg navbar-custom sticky" style="background: rgb(255, 255, 255);">
+            <div class="container">
+                <a class="logo" href="index.html">MeTime Stories</a> 
+                <!-- Navbar Toggler Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse-2" aria-controls="navbarCollapse-2" aria-expanded="false" style="color: rgb(33, 37, 41);" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" ></span>
+                </button>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse text-end d-xl-flex" id="navbarCollapse-2">
+                    <ul class="nav ml-auto navbar-center" id="mySidenav-2" style="padding-left: 0px;">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><span style="color: rgb(33, 37, 41);">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br>
+        <div class="dashboard">
+            <h3 style="font-family: 'Fredoka One'">Teacher</h3>
+
+            <section class="row why-metime-stories">
+                    <h2 style="text-align:center; color:#333;">📖  Readers Performance Table</h2>
+
+                    <div class="table-container">
+                        <table id="readersTable">
+                            <thead>
+                                <tr>
+                                    <th>Reader's Name</th>
+                                    <th>Books Read</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>Social & Emotional Comprehension</th>
+                                    <th>Reading Speed</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Emma Johnson</td>
+                                    <td>12</td>
+                                    <td>85%</td>
+                                    <td>78%</td>
+                                    <td>120 WPM</td>
+                                    <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Liam Smith</td>
+                                    <td>8</td>
+                                    <td>73%</td>
+                                    <td>82%</td>
+                                    <td>105 WPM</td>
+                                    <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Ava Brown</td>
+                                    <td>15</td>
+                                    <td>92%</td>
+                                    <td>89%</td>
+                                    <td>135 WPM</td>
+                                    <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <form id="readerForm">
+                        <input type="text" id="readerName" placeholder="Enter Reader's Name" required>
+                        <button type="submit">Add Reader</button>
+                    </form>
+                    <!-- <input>
+                    <button onclick="addNewStory()" class="button-row">Add Reader</button> -->
+            </section>
+
+        <!-- Second Container: Stories, Available Story, Progression, Feedback, Add Story -->
+        <div class="container-box">
+            <h3>Stories</h3>
+            
+            <div class="story-section">
+                
+                <!-- Available Stories in Tiles -->
+                <div class="card">
+                    <h4>Available Stories:</h4>
+                    <div class="story-tiles">
+                        <div class="story-tile">
+                            <!-- <img src="images/brave_explorer.jpg" alt="The Brave Explorer" class="story-image"> -->
+                            <h5>The Brave Explorer</h5>
+                        </div>
+                        <div class="story-tile">
+                            <!-- <img src="images/magic_of_forest.jpg" alt="Magic of the Forest" class="story-image"> -->
+                            <h5>Magic of the Forest</h5>
+                        </div>
+                        <div class="story-tile">
+                            <!-- <img src="images/adventures_in_space.jpg" alt="Adventures in Space" class="story-image"> -->
+                            <h5>Adventures in Space</h5>
+                        </div>
+                        <div class="story-tile">
+                            <!-- <img src="images/lost_kingdom.jpg" alt="The Lost Kingdom" class="story-image"> -->
+                            <h5>The Lost Kingdom</h5>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Add New Story -->
+                <div class="card">
+                    <h4>Add a New Story:</h4>
+                    <label for="add-story-dropdown">Select a Story:</label>
+                    <select id="add-story-dropdown">
+                        <option value="">-- Select a Story --</option>
+                        <option value="Ty & the Time-Travelling Tractor By MeTime Stories">Ty & the Time-Travelling Tractor By MeTime Stories</option>
+                        <option value="Adventures at Universal Studios">Adventures at Universal Studios</option>
+                        <option value="The Lost Island">The Lost Island</option>
+                    </select>
+                    <button onclick="addNewStory()" class="button-row">Add Story</button>
+                </div>
+            </div>
+        </div>
+             
+        
+
+
+        <!-- Third Container: Settings -->
+        <div class="container-box">
+            <h3>Settings</h3>
+            <div class="button-row">
+            <button style="background-color: #D43F3F;" onclick="deleteAccount()">Delete Account</button>
+            </div>
+        </div>
+        
+    </div>
+    <footer class="bg-light section pb-3" style="background-color: #f8e7ce;">
+        <p>&copy; 2025 MeTime Stories. All Rights Reserved.</p>
+    </footer>
+    </section>
+    
+
+    
+   
+    <script src="js/jquery.min.js"></script><script src="js/bootstrap.bundle.min.js"></script><script src="js/jquery.easing.min.js"></script><script src="js/scrollspy.min.js"></script><script src="js/ion.rangeSlider.min.js"></script><script src="js/jquery.magnific-popup.min.js"></script><script src="js/isotope.js"></script><script src="js/counter.init.js"></script><script src="js/swiper.min.js"></script><script src="js/jquery.flexslider-min.js"></script><script src="js/jquery.mb.YTPlayer.js"></script><script src="js/contact.init.js"></script><script src="js/app.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js?h=981245863c383366a329259d02b8172c"></script>
+    <script>
+        function assignStory() {
+            let story = document.getElementById("story-select").value;
+            alert("Story assigned: " + story);
+        }
+        
+        function submitFeedback() {
+            let feedback = document.getElementById("feedback").value;
+            if (feedback.trim() === "") {
+                alert("Please enter feedback before submitting.");
+                return;
+            }
+            alert("Feedback submitted: " + feedback);
+            document.getElementById("feedback").value = "";
+        }
+
+        function addNewStory() {
+        const selectedStory = document.getElementById("add-story-dropdown").value;
+        const storyTilesContainer = document.querySelector(".story-tiles"); // Targeting the story tiles container
+
+        if (selectedStory) {
+            // Check if the story tile is already in the list
+            const existingTiles = storyTilesContainer.getElementsByClassName("story-tile");
+            let storyExists = false;
+            
+            // Loop through the existing tiles to check if the story is already added
+            for (let i = 0; i < existingTiles.length; i++) {
+                if (existingTiles[i].querySelector("h5").textContent === selectedStory) {
+                    storyExists = true;
+                    break;
+                }
+            }
+
+            // If the story is not already in the list, add it as a tile
+            if (!storyExists) {
+                // Create new story tile
+                const newStoryTile = document.createElement("div");
+                newStoryTile.classList.add("story-tile");
+
+                // Create the image (you can replace this with a valid image URL)
+                // const storyImage = document.createElement("img");
+                // storyImage.classList.add("story-image");
+                // storyImage.src = "images/default-story.jpg"; // Placeholder image
+
+                // Create the title
+                const storyTitle = document.createElement("h5");
+                storyTitle.textContent = selectedStory;
+
+                // Append image and title to the new tile
+                // newStoryTile.appendChild(storyImage);
+                newStoryTile.appendChild(storyTitle);
+
+                // Append the new story tile to the story tiles container
+                storyTilesContainer.appendChild(newStoryTile);
+
+                alert("New story '" + selectedStory + "' has been added!");
+            } else {
+                alert("This story is already in the list.");
+            }
+        } else {
+            alert("Please select a story first.");
+        }
+    }
+
+    function deleteRow(button) {
+            let row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+        document.getElementById('readerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById('readerName').value;
+            if (name.trim() === '') return; // Prevent empty inputs
+
+            let table = document.getElementById('readersTable').getElementsByTagName('tbody')[0];
+            let newRow = table.insertRow();
+            
+            newRow.innerHTML = `
+                <td>${name}</td>
+                <td>0</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td>0 WPM</td>
+                <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+            `;
+
+            document.getElementById('readerForm').reset(); // Clear input field
+        });
+
+        function deleteRow(button) {
+            let row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+
+    </script>
+</body>
+
+</html>

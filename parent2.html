@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage Readers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Admin Navigation Bar -->
+    <header class="admin-header">
+        <nav>
+            <ul>
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="manage-readers.html">Manage Readers</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Admin Content -->
+    <section class="admin-content">
+        <h1>Manage Readers</h1>
+        <div class="reader-actions">
+            <button onclick="addReader()">Add Reader</button>
+            <button onclick="editReader()">Edit Reader</button>
+            <button onclick="deleteReader()">Delete Reader</button>
+        </div>
+
+        <div class="reader-list">
+            <h2>Reader List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Reader Name</th>
+                        <th>Age</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="reader-table">
+                    <!-- Dynamically populated table rows for readers -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="admin.js"></script>
+</body>
+</html>

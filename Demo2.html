@@ -5,9 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0", shrink-to-fit=no>
     <title>MeTime Stories</title>
     <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png">
-    <style>
-       
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png?h=11c3bde2f687b7d173ee737264ea0e27">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png?h=8f73f8916c943d6acee7ca2f6b4aed0f">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png?h=919c220ee0cafb86119f8299a89bae82">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png?h=919c220ee0cafb86119f8299a89bae82">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png?h=4400dc3e30bd51235a8df168b80a7b47">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=025df1ec88740cad5ff14bb3380da6dd">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Palmyrene&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Flex&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.min.css?h=3ee63c3ae91ef86534bb6a30fb81cb9c">
+
+<style>       
 body {
+    background-color: #FBF1E2;
+}
+.body {
     font-family: Arial, sans-serif;
     max-width: 600px;
     margin: auto;
@@ -87,11 +106,34 @@ button:hover {
     display: none;
     text-align: left;
 }
+.logo {
+    font-family: 'Fredoka One';
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffa726;
+}
         
-    </style>
+</style>
 </head>
 <body>
-    <h2>Enter Details to Generate Your Story</h2>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky" style="background: rgb(255, 255, 255);">
+        <div class="container">
+            <a class="logo" href="index.html">MeTime Stories</a> 
+            <i style="font-family: cursive;" >Where each story is Yours.</i>
+            <!-- Navbar Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse-2" aria-controls="navbarCollapse-2" aria-expanded="false" style="color: rgb(33, 37, 41);" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" ></span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse text-end d-xl-flex" id="navbarCollapse-2">
+                <ul class="nav ml-auto navbar-center" id="mySidenav-2" style="padding-left: 0px;">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><span style="color: rgb(33, 37, 41);">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="body">
+    <h2 style="font-size: 28px; font-family: 'Fredoka One'">Enter Details to Generate Your Story</h2>
 
     <form id="storyForm">
         <input type="text" id="child_name" placeholder="Child's Name">
@@ -116,12 +158,6 @@ button:hover {
 
         <input type="text" id="pet_name" placeholder="Teddy's Name">
         <span class="error" id="error_pet_name">Enter teddy's name.</span>
-
-        <!-- <input type="text" id="friend_home" placeholder="Home Friend">
-        <span class="error" id="error_friend_home">Enter friend's name.</span>
-
-        <input type="text" id="friend_school" placeholder="School Friend">
-        <span class="error" id="error_friend_school">Enter friend's name.</span> -->
 
         <button type="submit">Generate Story</button>
     </form>
@@ -172,13 +208,34 @@ button:hover {
             const pronoun = userData.gender;
             const possessive = pronoun === "he" ? "his" : "her";
             const possessive2 = pronoun === "he" ? "him" : "her";
+
+            // Select gender-specific images
+            const image1 = pronoun === "he" ? "images/1.png" : "images/23.jpg";
+            const image2 = pronoun === "he" ? "images/2.png" : "images/24.jpg";
+            const image3 = pronoun === "he" ? "images/3.png" : "images/25.jpg";
+            const image4 = pronoun === "he" ? "images/4.png" : "images/26.jpg";
+            const image5 = pronoun === "he" ? "images/5.png" : "images/27.jpg";
+            const image6 = pronoun === "he" ? "images/6.png" : "images/28.jpg";
+            const image7 = pronoun === "he" ? "images/7.png" : "images/29.jpg";
+            const image8 = pronoun === "he" ? "images/8.png" : "images/30.jpg";
+            const image9 = pronoun === "he" ? "images/9.png" : "images/31.jpg";
+            const image10 = pronoun === "he" ? "images/10.png" : "images/32.jpg";
+            const image11 = pronoun === "he" ? "images/11.png" : "images/33.jpg";
+            const image12 = pronoun === "he" ? "images/12.png" : "images/34.jpg";
+            const image13 = pronoun === "he" ? "images/13.png" : "images/35.jpg";
+            const image14 = pronoun === "he" ? "images/14.png" : "images/36.jpg";
+            const image15 = pronoun === "he" ? "images/15.png" : "images/37.jpg";
+            const image16 = pronoun === "he" ? "" : "images/38.jpg";
+            const image17 = pronoun === "he" ? "" : "images/39.jpg";
+            const image18 = pronoun === "he" ? "" : "images/40.jpg";
+            
             
             const story = `
 
-                <h2>${userData.child_name} & the Time-Travelling Tractor By MeTime Stories</h2>
+                <h2 style="font-family: 'Fredoka One'">${userData.child_name} & the Time-Travelling Tractor By MeTime Stories</h2>
 
             <h3>1</h3>
-                <img src="images/1.png" alt="Image Not Loading">
+                <img src="${image1}" alt="Image Not Loading">
                 <p>${userData.child_name} went to the farm with ${userData.parent1}, ${userData.parent2}, 
                 ${userData.uncle_name}, and ${possessive} favourite teddy, ${userData.pet_name} the green dinosaur. 
                 ${capitalizeFirstLetter(pronoun)} saw a cow munching on grass, pigs rolling around in the mud, and lambs jumping playfully 
@@ -187,7 +244,7 @@ button:hover {
                 
 
             <h3>2</h3>
-                <img src="images/2.png" alt="Image Not Loading">
+                <img src="${image2}" alt="Image Not Loading">
                 <p>${userData.child_name} then spotted a ginger cat. Her name was Tabby and she had a very 
                 important job to play at the farm: she was there to scare the mice away. Tabby had a shiny fur coat 
                 and glistening green eyes that gleamed brighter than emeralds.</p>
@@ -197,7 +254,7 @@ button:hover {
                 zipped through the chicken pen, and jumped over the sheepdog.</p>
 
             <h3>3</h3>
-                    <img src="images/3.png" alt="Image Not Loading">
+                    <img src="${image3}" alt="Image Not Loading">
                 <p>${userData.child_name} was tired after chasing the cat all across the farm, so ${pronoun} sat down to take a break on a nearby tractor. 
                 As ${pronoun} rested, ${pronoun} looked around and saw Tabby perched beside ${possessive2}. But to ${possessive} surprise, she didn't jump away this time. 
                 She instead meowed at ${possessive2} in a mysterious and magical manner...</p>
@@ -208,7 +265,7 @@ button:hover {
                 <p>“Yes!” shouted ${userData.child_name} excitedly as ${pronoun} followed the cat’s instructions. “I love adventures!”</p>
 
              <h3>4</h3>
-                    <img src="images/4.png" alt="Image Not Loading">
+                    <img src="${image4}" alt="Image Not Loading">
                 <p>All of a sudden, the world around ${userData.child_name} began to blur. Colours shifted and swirled before ${possessive} eyes 
                 and, soon enough, the farm had disappeared out of view. Holding ${userData.pet_name} close, ${pronoun} was nervous but excited 
                 to embark on ${possessive} next adventure.</p>
@@ -217,21 +274,21 @@ button:hover {
                 Well, ${pronoun} was travelling through time, after all!</p>
 
             <h3>5</h3>
-                    <img src="images/5.png" alt="Image Not Loading">
+                    <img src="${image5}" alt="Image Not Loading">
                 <p>As soon as ${userData.child_name} opened ${possessive} eyes, ${pronoun} quickly realised ${pronoun} wasn’t at the farm anymore. The tractor had transported ${possessive2} back in time to a place ${pronoun}’d only ever read about in books and watched in movies…</p>
 
                <p> ${userData.child_name} couldn’t believe what ${pronoun} was seeing. Before ${possessive2} stood a volcano that towered majestically into the sky, sending out thick plumes of smoke. ${capitalizeFirstLetter(pronoun)} also saw forests full of gigantic, leafy trees, a crystal-clear lake that shimmered brightly in the sun, and winged creatures with long beaks that soared through the clouds.
             </p>
 
             <h3>6</h3>
-            <img src="images/6.png" alt="Image Not Loading">
+            <img src="${image6}" alt="Image Not Loading">
             <p>
                 ${userData.child_name} turned to Tabby, bursting with excitement, to ask: "Are we… in the land of dinosaurs?"
                 “Yes!” replied the cat proudly. “It’s the purrrr-fect place to embark on an adventure. Now, let’s go!”
             </p>
 
             <h3>7</h3>
-            <img src="images/7.png" alt="Image Not Loading">
+            <img src="${image7}" alt="Image Not Loading">
             <p>
                 ${userData.child_name} began to drive the tractor down the hill. As ${pronoun} bumped down the rocky path, ${possessive} eyes wide with wonder, ${pronoun} spotted some baby dinosaurs. They had wings, just like the bigger ones ${pronoun}’d seen soaring through the clouds. They were called _________.
 
@@ -239,7 +296,7 @@ button:hover {
             </p>
 
             <h3>8</h3>
-            <img src="images/8.png" alt="Image Not Loading">
+            <img src="${image8}" alt="Image Not Loading">
             <p>
                 As ${pronoun} continued to drive down into the dinosaur valley, the ground beneath the wheels began to tremble. ${userData.child_name} heard a rumble and a worried cry… ${pronoun} looked around and saw a Triceratops that had gotten stuck!
                 </p>
@@ -249,7 +306,7 @@ button:hover {
             </p>
 
             <h3>9</h3>
-            <img src="images/9.png" alt="Image Not Loading">
+            <img src="${image9}" alt="Image Not Loading">
             <p>
                 “Thank you!” replied the grateful dinosaur. “By the way, you can call me Trixie!”
 
@@ -260,7 +317,7 @@ button:hover {
             </p>
 
             <h3>10</h3>
-            <img src="images/10.png" alt="Image Not Loading">
+            <img src="${image10}" alt="Image Not Loading">
             <p>
                 ${userData.child_name} knew exactly what ${pronoun} needed to do. ${capitalizeFirstLetter(pronoun)} used the tractor’s extendable grabber to pick a bunch of fruit.
                 </p>
@@ -269,7 +326,7 @@ button:hover {
             </p>
 
             <h3>11</h3>
-            <img src="images/11.png" alt="Image Not Loading">
+            <img src="${image11}" alt="Image Not Loading">
             <p>
                 “What do you think Rexy wanted with all that fruit?” ${userData.child_name} asked Tabby as they continued their journey through the thick forest.
                 </p>
@@ -278,7 +335,7 @@ button:hover {
             </p>
 
             <h3>12</h3>
-            <img src="images/12.png" alt="Image Not Loading">
+            <img src="${image12}" alt="Image Not Loading">
             <p>
                 Happy to have helped another dinosaur, ${userData.child_name} continued to travel through the prehistoric land.
                 </p>
@@ -290,7 +347,7 @@ button:hover {
             </p>
 
             <h3>13</h3>
-            <img src="images/13.png" alt="Image Not Loading">
+            <img src="${image13}" alt="Image Not Loading">
             <p>
                 “What’s wrong, Mr. Brachiosaurus?” called ${userData.child_name}, wanting to help.
                 </p>
@@ -304,7 +361,7 @@ button:hover {
             </p>
 
             <h3>14</h3>
-            <img src="images/14.png" alt="Image Not Loading">
+            <img src="${image14}" alt="Image Not Loading">
             <p> 
                 ${userData.child_name} drove deeper into the leafy forest until ${pronoun} found a clearing. ${capitalizeFirstLetter(pronoun)} then turned to Tabby and said: “I’ve had the best day ever, helping all the dinosaurs. But I think it’s time we stopped for a deserved break.”
 
@@ -314,7 +371,7 @@ button:hover {
             </p>
 
             <h3>15</h3>
-            <img src="images/15.png" alt="Image Not Loading">
+            <img src="${image15}" alt="Image Not Loading">
             <p>
                 ${userData.child_name} was nervous… until ${pronoun} saw who had been making the rustling noises. It was all ${possessive} new dinosaur friends, here to thank ${possessive2} for helping them with their problems!
 
@@ -322,6 +379,7 @@ button:hover {
             </p>
 
             <h3>16</h3>
+            <img src="${image16}" alt="Image Not Loading">
             <p>
                 But ${userData.child_name} soon started to feel very sleepy. ${capitalizeFirstLetter(pronoun)}’d had an amazing day but was now ready to go home.
 
@@ -334,6 +392,7 @@ button:hover {
             </p>
 
             <h3>17</h3>
+            <img src="${image17}" alt="Image Not Loading">
             <p>
                 Just like that, ${userData.child_name} was back on the farm, waving goodbye to ${possessive} feline friend.
                 </p>
@@ -349,10 +408,12 @@ button:hover {
                 <p>
                 “Yep,” said ${userData.child_name} sleepily. “I’ve seen lots of cool creatures, made loads of new friends, and even ridden a time-travelling tractor!”
             </p>
+            <img src="${image18}" alt="Image Not Loading">
             `;
             
             document.getElementById("story").innerHTML = story;
         }
     </script>
+    </div>
 </body>
 </html>
