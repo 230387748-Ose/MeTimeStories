@@ -50,6 +50,8 @@
                 window.location.href = 'school.html'; // Redirect to the Teacher page
             } else if (role === 'parent') {
                 window.location.href = 'parent.html'; // Redirect to the Parent page
+            } else if (role === 'admin') {
+                window.location.href = 'admin.html'; // Redirect to the Parent page
             } else {
                 alert("Please select a role.");
             }
@@ -83,6 +85,7 @@
                         <option value="reader">Reader</option>
                         <option value="parent">Parent</option>
                         <option value="teacher">Teacher</option>
+                        <option value="admin">Admin</option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Login</button>
