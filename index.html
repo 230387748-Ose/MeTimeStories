@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>MeTime Stories</title>
+    <meta name="" content="">
+    <meta name="description" content="Bringing your child's limitless imagination to life with personalised stories, made to order for your loved ones.">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png?h=11c3bde2f687b7d173ee737264ea0e27">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png?h=8f73f8916c943d6acee7ca2f6b4aed0f">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png?h=919c220ee0cafb86119f8299a89bae82">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png?h=919c220ee0cafb86119f8299a89bae82">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png?h=4400dc3e30bd51235a8df168b80a7b47">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=025df1ec88740cad5ff14bb3380da6dd">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Palmyrene&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Flex&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.min.css?h=3ee63c3ae91ef86534bb6a30fb81cb9c">
+</head>
+
+<style>
+    .logo {
+      font-family: 'Fredoka One';
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffa726;
+    }
+    .cta-btn {
+      background-color: #ffa726;
+      /* background-color: #28a745; */
+      color: white;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      /* background-color: #fb8c00; */
+      background-color: #28a745;
+    }
+
+    .features {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: center;
+          margin-top: 30px;
+    }
+    .features2 {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: center;
+          margin-top: 6px;
+    }
+    .feature-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        width: 260px;
+        text-align: center;
+    }
+    .feature-card2 {
+        background: white;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        width: 255px;
+        text-align: center;
+    }
+
+
+        .containerplan {
+            text-align: center;
+            margin-bottom: 0px;
+            background-color: #FBF1E2;
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: auto;
+            background-color: #FBF1E2;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card .badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: black;
+            color: white;
+            font-size: 14px;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 10px;
+            color: #111;
+        }
+
+        .subtext {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .features li {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        .features li::before {
+            content: "✔";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .note {
+            font-size: 13px;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: black;
+            color: white;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        #story img {
+            width: 100%; /* Makes the image fit the container */
+            /* max-width: 550px;  */
+            max-width: auto; /* Optional: Limits max size */
+            height: auto; /* Maintains aspect ratio */
+            display: block; /* Removes extra spacing */
+            margin: 10px auto; /* Centers the image */
+            border-radius: 8px; /* Optional: Rounds corners for a polished look */
+            object-fit: contain; /* Ensures images are displayed properly */
+        }
+</style>
+
+<body>
+    <section class="bg-light" id="home-1" style="background: url(&quot;assets/img/swing.svg?h=f2ee1091a49fa723edfed7163c48577e&quot;) no-repeat, rgb(0,71,255);background-size: 39%, auto;height: auto;">
+
+        <nav class="navbar navbar-expand-lg navbar-custom sticky" style="background: rgb(255, 255, 255);">
+            <div class="container">
+                <a class="logo" href="index.html">MeTime Stories</a> 
+                <i style="font-family: cursive;" >Where each story is Yours.</i>
+                <!-- Navbar Toggler Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse-2" aria-controls="navbarCollapse-2" aria-expanded="false" style="color: rgb(33, 37, 41);" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" ></span>
+                </button>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse text-end d-xl-flex" id="navbarCollapse-2">
+                    <ul class="nav ml-auto navbar-center" id="mySidenav-2" style="padding-left: 0px;">
+                        <li class="nav-item"><a class="nav-link" href="login.html"><span style="color: rgb(33, 37, 41);">Login/Register</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="school.html"><span style="color: rgb(33, 37, 41);">School</a></li>
+                        <li class="nav-item"><a class="nav-link" href="parent.html"><span style="color: rgb(33, 37, 41);">Parent</a></li>
+                        <li class="nav-item"><a class="nav-link" href="student.html"><span style="color: rgb(33, 37, 41);">Student</a></li>
+                        <li class="nav-item"><a class="nav-link" href="admin.html"><span style="color: rgb(33, 37, 41);">Admin</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row justify-content-center" style="background: rgba(251,241,226,0);height: 480.1px;">
+                <div class="col-12 col-lg-8 text-center d-md-flex justify-content-md-center">
+                    <div class="text-center home-contact mt-5 pt-5">
+                        <h1 class="home-title mt-5" style="background: rgba(255,255,255,0);font-family: 'Fredoka One', serif;font-size: 38px;color: rgb(5,35,52);">Personalized Adventures for Every Child</h1>
+                        <p class="text-muted mt-4" style="color: #212529 !important;width: 100%;text-align: center;font-size: 17px;">MeTime Stories brings your child's world to life through AI-powered, dynamically personalized storytelling.&nbsp;</p>
+                        <!-- <div class="mt-5">
+                            <div class="container"> -->
+                                <div class="row flex-row align-items-center">
+                                    <h2 class="home-title mt-3" style="font-size: 22px;font-family: 'Fredoka One', serif;">Ready to Start?</h2>
+                                    <p>Generate your first story now and make your child the hero.</p>
+                                </div>
+                            
+                                <button class="cta-btn" id="actionButton" >Create Your Story </button>
+                            <!-- </div> -->
+
+                            <!-- JavaScript to Perform Page Redirection -->
+                            <script>
+                                document.getElementById("actionButton").addEventListener("click", function () {
+                                    window.location.href = "Demo2.html";
+                                });
+                            </script>
+                        <!-- </div> -->
+                        <!-- <div class="home-img-2"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-12 col-lg-8 text-center d-md-flex justify-content-md-center">
+                    <div class="text-center home-contact mt-5 pt-5">
+                       
+                        <h2 class="home-title mt-5" style="background: rgba(255,255,255,0);font-family: 'Fredoka One', serif;font-size: 38px;color: rgb(5,35,52);">What is MeTime Stories?</h2>
+                        <p class="text-muted mt-4" style="color: #212529 !important;width: 100%;text-align: center;font-size: 19px;">We turn ordinary stories into magical adventures by customizing characters, names, voices, and even illustrations — just for your child.</p>
+                    
+                    </div>
+                </div>
+        </div>
+    </section>
+    
+       <!-- tutorial  -->
+       <section id="features2"  class="flex-row-reverse align-items-center" style="margin: 0px 0px;padding: 100px 0px;border-color: rgb(0,0,0);background: #fbf1e2;">
+        <div class="container">
+            <div class="row flex-row align-items-center">
+                <h2 class="home-title mt-3" style="font-size: 30px;font-family: 'Fredoka One', serif; text-align: center;">How it works.</h2>
+                <p style="text-align: center;">Four simple steps to unlock magical stories</p>
+                <div class="features">
+                    <div class="feature-card2">
+                        <img src="images/19.png" alt="Image Not Loading">
+                        <h3>Create Profile</h3>
+                        <p>Set up your personalized reading preferences.</p>
+                    </div>
+                    <div class="feature-card2">
+                        <img src="images/20.png" alt="Image Not Loading">
+                        <h3>Browse Stories</h3>
+                        <p>Explore our diverse collection of interactive tales.</p>
+                    </div>
+                    <div class="feature-card2">
+                        <img src="images/21.png" alt="Image Not Loading">
+                        <h3>Customize</h3>
+                        <p>Make each story uniquely yours with personal touches.</p>
+                    </div>
+                    <div class="feature-card2">
+                        <img src="images/22.png" alt="Image Not Loading">
+                        <h3>Start Reading</h3>
+                        <p>Immerse yourself in magical adventures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <section class="align-items-center bg-home" id="our-stories" style="background: #fbf1e2;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 flex-column-reverse">
+                    <div class="home-contact mt-4">
+                        <h1 class="home-title mt-3" style="font-size: 30px;font-family: 'Fredoka One', serif;">Our Stories<br></h1>
+                        <p class="text-muted mt-4" style="font-size: 19px;"><span style="color: rgb(14, 16, 26); background-color: transparent;">Designed for all occasions and customisable for all backgrounds, our stories are entertaining, educational, and empowering. They allow children to embrace what makes them </span><em><span style="color: rgb(14, 16, 26); background-color: transparent;">them </span></em><span style="color: rgb(14, 16, 26); background-color: transparent;">(and have a lot of fun along the way!).</span></p>
+                        <div class="mt-4 pt-3"></div>
+                        <div class="watch-video pt-5"><a class="video-play-icon text-white" href=""></a></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center d-lg-flex justify-content-xl-center">
+                    <div class="slider mt-4">
+                        <div class="swiper-container">
+                            <div class="d-lg-flex justify-content-lg-end swiper-wrapper justify-content-center">
+                                <div><img class="img-fluid" src="assets/img/images/Asset%201.svg?h=2569c9ab398924aa57ee00d9ebd5d055" alt="" width="484" height="385"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="align-items-center" id="our-mission" style="padding: 100px 0px;background: #fbf1e2;">
+        <div class="container">
+            <div class="row flex-row-reverse align-items-center">
+                <div class="col-lg-6">
+                    <div class="home-contact mt-4">
+                        <h1 id="personalisation" class="home-title mt-3" style="font-size: 30px; font-family: 'Fredoka One', serif;"><strong><span style="color: rgb(14, 16, 26); background-color: transparent;">The Power of MeTime Personalisation</span></strong></h1>
+                        <p class="text-muted mt-4" style="font-size: 19px;color: rgb(95,142,214);color: #2c3740;"><span style="color: rgb(14, 16, 26); background-color: transparent;">Research shows that personalisation in children's storybooks aids in literacy development, which in turn helps kids grow into confident and eager readers.</span><br></p>
+                        <p class="text-muted mt-4" style="font-size: 19px;color: rgb(95,142,214);color: #2c3740;"><span style="color: rgb(14, 16, 26); background-color: transparent;">Living out their wildest dreams on paper and relating to their personalised avatars makes children more receptive to the critical teachings of each tale they read — whether it be bravery, companionship, kindness, or curiosity.&nbsp;&nbsp;</span><br></p>
+                        <p class="text-muted mt-4" style="font-size: 19px;color: rgb(95,142,214);color: #2c3740;"><span style="color: rgb(14, 16, 26); background-color: transparent;">MeTime Stories offers a level of storybook personalisation unlike any other. We don't stop at eye colour and hairstyle. Children use our story customisation tool to bring their avatars to life, letting their imaginations run wild across a series of stories.</span><br></p>
+                        <div class="mt-4 pt-3"></div>
+                        <div class="watch-video pt-5"><a class="video-play-icon text-white" href=""></a></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4">
+                    <div class="mt-4">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div><img class="img-fluid" src="assets/img/images/sdfsd.svg?h=89784f3c943da57641feeceeb8024978" alt="" width="457" height="457"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- roles  -->
+    <section id="features"  class="flex-row-reverse align-items-center" style="margin: 0px 0px;padding: 100px 0px;border-color: rgb(0,0,0);background: #fbf1e2;">
+        <div class="container">
+            <div class="row flex-row align-items-center">
+                <h2 class="home-title mt-3" style="font-size: 30px;font-family: 'Fredoka One', serif; text-align: center;">Accounts</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <img src="images/16.png" alt="Image Not Loading">
+                        <h3>Parents</h3>
+                        <p>Monitor your child's progress and manage account settings.</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="images/17.png" alt="Image Not Loading">
+                        <h3>Readers</h3>
+                        <p>Start your storytelling adventure with fun interactive stories!</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="images/18.png" alt="Image Not Loading">
+                        <h3>Authors</h3>
+                        <p>Create and publish interactive stories for children.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <section class="flex-row-reverse align-items-center" id="about-us" style="margin: 0px 0px;padding: 100px 0px;border-color: rgb(0,0,0);background: #fbf1e2;">
+        <div class="container">
+            <div class="row flex-row align-items-center">
+                <div class="col-lg-6" id="goal">
+                    <div class="home-contact mt-4">
+                        <h1 class="home-title mt-3" style="font-size: 30px; font-family: 'Fredoka One', serif;"><strong><span style="color: rgb(14, 16, 26); background-color: transparent;">Our Goal</span></strong></h1>
+                        <p class="text-muted mt-4" style="font-size: 19px;"><span style="color: rgb(14, 16, 26); background-color: transparent;">It's our mission to ignite a passion for reading among today's youth with personalised children's stories. We want to enable your kids to explore fictional worlds with personal avatars. From reliving past experiences to exploring different cultures to saving the day as a superhero, we aim to engage child readers like never before.</span></p>
+                        <div class="mt-4 pt-3"></div>
+                        <div class="watch-video pt-5"><a class="video-play-icon text-white" href=""></a></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mt-4">
+                        <div class="swiper-container">
+                            <div class="text-center d-lg-flex justify-content-lg-end swiper-wrapper" style="text-align: right;">
+                                <div class="text-start"><img class="img-fluid" src="assets/img/images/aaaaa.svg?h=065976f45097eba83f6590f5aca1f619" alt="" width="422" height="320"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- addition  -->
+    <section id="features"  class="flex-row-reverse align-items-center" style="margin: 0px 0px;padding: 100px 0px;border-color: rgb(0,0,0);background: #fbf1e2;">
+    <div class="container">
+        <div class="row flex-row align-items-center">
+            <h2 class="home-title mt-3" style="font-size: 30px;font-family: 'Fredoka One', serif;">Why MeTime?</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Dynamic Personalization</h3>
+                    <p>Insert your child directly into the story world — names, voices, looks and more.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Custom Illustrations</h3>
+                    <p>Upload a photo, and we'll generate an illustrated character using AI (LTX-powered).</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Diverse Stories</h3>
+                    <p>Our growing multicultural library features inclusive characters, values, and themes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- subscription -->
+    <div class="containerplan">
+        <h1>Subscription Plans</h1>
+    </div>
+
+    <div class="pricing-container">
+        <!-- Digital-Only Plan -->
+        <div class="card">
+            <div class="badge">Digital-Only</div>
+            <div class="price">£9.99<span>/month</span></div>
+            <p class="subtext">Cost-effective digital experience</p>
+            <ul class="features">
+                <li>Complete digital library access</li>
+                <li>Dynamic story updates</li>
+                <li>Multi-device reading</li>
+            </ul>
+            <p class="note">Perfect for on-the-go families</p>
+            <a href="login.html" class="btn">Get Started</a>
+        </div>
+
+        <!-- Mid-Tier Plan -->
+        <div class="card">
+            <div class="badge">Mid-Tier</div>
+            <div class="price">£14.99<span>/month</span></div>
+            <p class="subtext">Digital + Print experience</p>
+            <ul class="features">
+                <li>One hardcopy print per month</li>
+                <li>Full digital library access</li>
+                <li>Interactive story features</li>
+            </ul>
+            <p class="note">Ideal blend of print and digital</p>
+            <a href="login.html" class="btn">Get Started</a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="card">
+            <div class="badge">Premium</div>
+            <div class="price">£19.99<span>/month</span></div>
+            <p class="subtext">Ultimate family experience</p>
+            <ul class="features">
+                <li>Two evolving hardcopy prints monthly</li>
+                <li>Early access to new features</li>
+                <li>Immersive enhancements</li>
+            </ul>
+            <p class="note">Perfect for families with multiple children</p>
+            <a href="login.html" class="btn">Get Started</a>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <section class="bg-light section pb-5" style="background-color: #f8e7ce !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-info mt-4">
+                        <h5 class="f-18 mt-4 pt-1 line-height_1_6">Bringing the joy of reading back into the home with custom storybooks made just for you and your loved ones&nbsp;</h5>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="row"></div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="mt-4 pl-0 pl-lg-4">
+                        <h5 class="f-18">Follow Us</h5>
+                        <ul class="list-inline social-icons-list pt-3">
+                            <li class="list-inline-item list-inline-item" href=""><a class="mdi mdi-facebook" href="https://www.facebook.com/profile.php?id=100089581993342&amp;is_tour_dismissed=true"></a></li>
+                            <li class="list-inline-item list-inline-item" href=""><a class="mdi mdi-twitter" href="https://twitter.com/MeTimeStories_"></a></li>
+                            <li class="list-inline-item list-inline-item" href=""><a class="mdi mdi-linkedin" href="https://www.linkedin.com/in/metimestories-metimestories-9b77b6262/"></a></li>
+                            <li class="list-inline-item list-inline-item"><i href=""></i><a class="mdi mdi-instagram" href="https://www.instagram.com/metimestories_/"></a></li>
+                        </ul>
+                        <div class="mt-4"><a href="" class="pr-3"></a><a href=""></a></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <p class="text-muted mb-0">2023 © MeTime Stories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><script src="js/jquery.min.js"></script><script src="js/bootstrap.bundle.min.js"></script><script src="js/jquery.easing.min.js"></script><script src="js/scrollspy.min.js"></script><script src="js/ion.rangeSlider.min.js"></script><script src="js/jquery.magnific-popup.min.js"></script><script src="js/isotope.js"></script><script src="js/counter.init.js"></script><script src="js/swiper.min.js"></script><script src="js/jquery.flexslider-min.js"></script><script src="js/jquery.mb.YTPlayer.js"></script><script src="js/contact.init.js"></script><script src="js/app.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js?h=981245863c383366a329259d02b8172c"></script>
+</body>
+
+</html>

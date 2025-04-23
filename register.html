@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", shrink-to-fit=no>
+    <title>Register | MeTime Stories</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png?h=11c3bde2f687b7d173ee737264ea0e27">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png?h=8f73f8916c943d6acee7ca2f6b4aed0f">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png?h=919c220ee0cafb86119f8299a89bae82">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png?h=919c220ee0cafb86119f8299a89bae82">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png?h=4400dc3e30bd51235a8df168b80a7b47">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=025df1ec88740cad5ff14bb3380da6dd">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Palmyrene&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Flex&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.min.css?h=3ee63c3ae91ef86534bb6a30fb81cb9c">
+    <style>
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }   
+        .logo {
+            font-family: 'Fredoka One';
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffa726;
+        }
+        body {
+            background-color: #FBF1E2;
+        }
+    </style>
+    <script>
+        function redirectToPage() {
+            var role = document.getElementById('role').value;
+            if (role === 'teacher') {
+                window.location.href = 'school.html'; // Redirect to the Teacher page
+            } else if (role === 'parent') {
+                window.location.href = 'parent.html'; // Redirect to the Parent page
+            } else {
+                alert("Please select a role.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky" style="background: rgb(255, 255, 255);">
+        <div class="container">
+            <a class="logo" href="index.html">MeTime Stories</a> 
+            <!-- Navbar Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse-2" aria-controls="navbarCollapse-2" aria-expanded="false" style="color: rgb(33, 37, 41);" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" ></span>
+            </button>
+          
+        </div>
+    </nav>
+    
+    
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center" style="font-family: 'Fredoka One';">Register</h2>
+            <form action="#" method="POST" onsubmit="event.preventDefault(); redirectToPage();">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="role" class="form-label">Role </label>
+                    <select class="form-control" id="role" required>
+                        <option value="">Select Role Type</option>
+                        <option value="parent">Parent</option>
+                        <option value="teacher">Teacher</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" required>
+                </div>
+                
+                <button type="submit" class="btn btn-success w-100">Register</button>
+            </form>
+            <p class="text-center mt-3">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>

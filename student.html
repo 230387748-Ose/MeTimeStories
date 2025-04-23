@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>MeTime Stories</title>
+    <meta name="" content="">
+    <meta name="description" content="Bringing your child's limitless imagination to life with personalised stories, made to order for your loved ones.">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png?h=11c3bde2f687b7d173ee737264ea0e27">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png?h=8f73f8916c943d6acee7ca2f6b4aed0f">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png?h=919c220ee0cafb86119f8299a89bae82">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png?h=919c220ee0cafb86119f8299a89bae82">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png?h=4400dc3e30bd51235a8df168b80a7b47">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=025df1ec88740cad5ff14bb3380da6dd">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Balsamiq+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Palmyrene&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Flex&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.min.css?h=3ee63c3ae91ef86534bb6a30fb81cb9c">
+</head>
+<style>
+    body {
+        background-color: #FBF1E2;
+        font-family: 'Poppins', sans-serif;
+    }
+    .dashboard-container {
+        max-width: 600px;
+        margin: 50px auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        padding: 20px;
+    }
+    .dashboard-title {
+        font-weight: bold;
+        color: #000000;
+        text-align: center;
+    }
+    .story-card {
+        background: #A7E0E5;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .btn-create {
+        display: block;
+        width: 100%;
+        background: #ff6f61;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .btn-create:hover {
+        background: #ff5449;
+    }
+    .logo {
+      font-family: 'Fredoka One';
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffa726;
+    }
+    .cta-btn {
+      background-color: #ffa726;
+      display: block;
+      /* background-color: #28a745; */
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      /* background-color: #fb8c00; */
+      background-color: #28a745;
+    }
+</style>
+
+
+<body>
+    <section class="bg-light" id="home-1" style="background: url(&quot;assets/img/swing.svg?h=f2ee1091a49fa723edfed7163c48577e&quot;) no-repeat, rgb(0,71,255);background-size: 39%, auto;height: 525px;">
+
+        <nav class="navbar navbar-expand-lg navbar-custom sticky" style="background: rgb(255, 255, 255);">
+            <div class="container">
+                <a class="logo" href="index.html">MeTime Stories</a> 
+                <!-- Navbar Toggler Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse-2" aria-controls="navbarCollapse-2" aria-expanded="false" style="color: rgb(33, 37, 41);" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" ></span>
+                </button>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse text-end d-xl-flex" id="navbarCollapse-2">
+                    <ul class="nav ml-auto navbar-center" id="mySidenav-2" style="padding-left: 0px;">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><span style="color: rgb(33, 37, 41);">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+        
+        <div class="container">
+            <div class="dashboard-container">
+                <h2 class="dashboard-title" style="font-family: 'Fredoka One';">Welcome!</h2>
+                <p>Here you can create and view your stories.</p>
+                
+                <a href="Demo2.html" class="cta-btn" id="actionButton">➕ Create a New Story</a>
+                
+                <h4 class="mt-4" style="font-family: 'Fredoka One';">Available Stories</h4>
+                <div class="story-card">
+                   
+                    <strong>Adventure in the Forest</strong> 
+                    <p>Created: 2 days ago</p>
+                    <!-- <button class="btn btn-sm btn-primary">Edit</button> -->
+                    
+                </div>
+                <div class="story-card">
+                    <strong>The Magical Unicorn</strong>
+                    <p>Created: 5 days ago</p>
+                </div>
+                <div class="story-card">
+                    <strong>Space Explorers</strong>
+                    <p>Created: 1 week ago</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    </section>
+    
+    <script src="js/jquery.min.js"></script><script src="js/bootstrap.bundle.min.js"></script><script src="js/jquery.easing.min.js"></script><script src="js/scrollspy.min.js"></script><script src="js/ion.rangeSlider.min.js"></script><script src="js/jquery.magnific-popup.min.js"></script><script src="js/isotope.js"></script><script src="js/counter.init.js"></script><script src="js/swiper.min.js"></script><script src="js/jquery.flexslider-min.js"></script><script src="js/jquery.mb.YTPlayer.js"></script><script src="js/contact.init.js"></script><script src="js/app.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js?h=981245863c383366a329259d02b8172c"></script>
+
+</body>
+
+</html>

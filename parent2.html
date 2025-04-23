@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correlation Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</head>
+<style>
+    /* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.correlation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.correlation-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.correlation-card:hover {
+    transform: scale(1.05);
+}
+
+.correlation-card img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.arrow {
+    font-size: 2em;
+    margin: 0 20px;
+    color: #ffd700;
+    transition: transform 0.3s ease-in-out;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+</style>
+<body>
+    <header>
+        <h1>Correlation Analysis</h1>
+        <p>Explore relationships between different variables with visually appealing graphs and interactive insights.</p>
+    </header>
+    
+    <section class="correlation-container">
+        <div class="correlation-card">
+            <h2>Overview in Matrix</h2>
+            <img src="matrix_overview.png" alt="Matrix Overview">
+            <p>Get a quick overview of variable relationships using a scatterplot matrix.</p>
+        </div>
+        <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="correlation-card">
+            <h2>Correlate with Target Variable</h2>
+            <img src="heatmap.png" alt="Heatmap Correlation">
+            <p>View heatmap correlations to identify strong relationships with the target variable.</p>
+        </div>
+        <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="correlation-card">
+            <h2>Inspect Details</h2>
+            <img src="scatterplot.png" alt="Detailed Inspection">
+            <p>Dive deeper into specific relationships by analyzing scatterplots in detail.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Data Insights | Designed for interactive data visualization</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
